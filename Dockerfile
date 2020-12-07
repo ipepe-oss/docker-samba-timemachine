@@ -11,8 +11,8 @@ COPY smb.conf /etc/samba/smb.conf
 COPY avahia.service /etc/avahi/services/timemachine.service
 COPY supervisord.conf /etc/supervisord.conf
 
-RUN groupadd -g 1000 smbuser
-RUN useradd -m -s /bin/bash -g smbuser -u 1000 smbuser
+RUN addgroup -g 1000 smbuser
+RUN adduser -D -H -u 1000 -G smbuser smbuser
 
 VOLUME ["/timemachine"]
 ENTRYPOINT ["/tmp/setup.sh"]
