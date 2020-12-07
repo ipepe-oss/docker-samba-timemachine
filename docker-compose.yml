@@ -12,4 +12,5 @@ services:
       - '/zdata/timemachine:/timemachine'
       - '/zdata/share:/share'
       - '/zdata/public:/public'
+      - '/zdata/users:/users'
       - '/etc/localtime:/etc/localtime:ro'
