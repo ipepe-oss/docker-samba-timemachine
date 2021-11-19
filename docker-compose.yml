@@ -4,10 +4,6 @@ services:
     build: .
     restart: always
     network_mode: host
-    environment:
-      TM_USER: tmbackup
-      TM_PW: tmbackup
-      TM_SIZE: 1024000
     volumes:
       - '/zdata/timemachine:/timemachine'
       - '/zdata/share:/share'
